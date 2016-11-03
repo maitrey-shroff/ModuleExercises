@@ -1,4 +1,6 @@
-Module changes
+module Vehicle
+
+  attr_accessor :speed, :direction
 
   def brake
     @speed = 0
@@ -14,18 +16,8 @@ Module changes
 
 end
 
-class Vehicle
-
-  attr_accessor :speed, :direction
-
-  def initialize
-    @speed = 0
-    @direction = 'north'
-  end
-
-end
-
-class Car < Vehicle
+class Car
+  include Vehicle
 
   def intialize
     super
@@ -40,7 +32,8 @@ class Car < Vehicle
 
 end
 
-class Bike < Vehicle
+class Bike
+  include Vehicle
 
   def initialize
     super
