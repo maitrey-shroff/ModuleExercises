@@ -1,3 +1,5 @@
-class Intern < Employee
-  include EmailReporter
+module EmployeeProgram
+  class Intern < Employee
+    include EmailReporter
+  end
 end
